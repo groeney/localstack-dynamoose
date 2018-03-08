@@ -1,0 +1,8 @@
+{
+  "name": "Example",
+  "version": "0.0.1",
+  "description": "Shows an example of a dockerized dynamodb-local instance (with localstack) working with a dockerized node server and Dynamoose",
+  "scripts": {
+    "dup": "TMPDIR=/private$TMPDIR docker-compose up"
+  }
+}

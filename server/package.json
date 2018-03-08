@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "dev": "DEBUG=* nodemon -L app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "dynamoose": "^0.8.6",
+    "nodemon": "^1.15.1"
+  }
+}
