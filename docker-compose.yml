@@ -3,8 +3,7 @@ services:
   server:
     build: ./server/.
     depends_on:
-      localstack:
-        condition: service_started
+      - localstack
     ports:
       - 5000:5000
     volumes:

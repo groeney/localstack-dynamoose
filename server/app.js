@@ -20,9 +20,19 @@ const UserSchema = new Schema({
 
 const User = dynamoose.model('User', UserSchema);
 
-console.log("#####################")
+const user = new User({
+	first_name: 'Alice',
+	last_name: 'Jones'
+})
+
+user.save(function (err) {
+  if(err) { return console.log(err); }
+  console.log('Ta-da!');
+});
+
 User.scan({}).exec(function (err, users) {
-  console.log(JSON.stringify(users));
+	console.log("########## Users in DynamoDB-Local ###########")
+	console.log(JSON.stringify(users));
 });
 
 const server = app.listen(process.env.PORT || 5000, () => {
